@@ -21,7 +21,18 @@ h2{color:#f5d76e}
 </style>
 </head>
 <body>
+<div class="menu-btn" onclick="openMenu()">☰</div>
 
+<div id="menu" class="menu">
+<div class="close" onclick="closeMenu()">×</div>
+<a href="#">Главная</a>
+<a href="#rooms">Номера</a>
+<a href="#price">Прайс</a>
+<a href="#reviews">Отзывы</a>
+<a href="#contacts">Контакты</a>
+<a href="https://t.me/seven_days_hotel">Telegram</a>
+<a href="https://instagram.com/7dayshomyhome">Instagram</a>
+</div>
 <div class="hero">
 <img src="hotel-front.jpg">
 <h1>7 DAYS HOMY HOME</h1>
@@ -150,6 +161,18 @@ h2{color:#f5d76e}
 <a class="btn" href="tel:+998770322777">📞 Забронировать</a>
 <a class="btn" href="https://t.me/seven_days_hotel">💬 Написать в Telegram</a>
 </div>
+<script>
+function openMenu(){
+document.getElementById("menu").style.display="block";
+}
+
+function closeMenu(){
+document.getElementById("menu").style.display="none";
+}
+</script>
 
 </body>
 </html>
+
+
+

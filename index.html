@@ -1,83 +1,130 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>7 Days Homy Home</title>
-
-<style>
-body{margin:0;font-family:Arial;background:#063f38;color:white;text-align:center}
-.hero{padding:30px 15px;background:linear-gradient(#063f38,#0f6d63)}
-img{max-width:100%;border-radius:18px;margin:10px 0}
-.box{background:#0b4f47;margin:18px auto;padding:20px;border-radius:20px;max-width:900px}
-.btn{display:inline-block;background:#d4af37;color:#063f38;padding:14px 22px;margin:8px;border-radius:30px;text-decoration:none;font-weight:bold;border:none}
-h1{font-size:38px;color:#f5d76e}
-h2{color:#f5d76e}
-.price{font-size:20px;line-height:1.8}
-.gallery img{width:280px;height:360px;object-fit:cover}
-.lang button{font-size:16px}
-</style>
-</head>
-
-<body>
-
-<div class="lang">
-<button class="btn" onclick="setLang('ru')">🇷🇺 Русский</button>
-<button class="btn" onclick="setLang('uz')">🇺🇿 O‘zbekcha</button>
-<button class="btn" onclick="setLang('en')">🇬🇧 English</button>
-<button class="btn" onclick="setLang('zh')">🇨🇳 中文</button>
+<h2>Standard Room #4</h2>
+<div class="gallery">
+<img src="standard-room-4-1.jpg">
+<img src="standard-room-4-2.jpg">
+<img src="standard-room-4-3.jpg">
+</div>
+<p class="roomText">Уютный номер для гостей, которые ценят простоту, чистоту и комфорт.</p>
 </div>
 
-<div class="hero">
-<img src="hotel-front.jpg">
-<h1>7 DAYS HOMY HOME</h1>
+<div class="box">
+<h2>Family Room #5</h2>
+<div class="gallery">
+<img src="family-room-5-1.jpg">
+<img src="family-room-5-2.jpg">
+</div>
+<p class="roomText">Просторный семейный номер для родителей с детьми или небольшой компании гостей.</p>
+</div>
 
-<p data-ru="Уютный отель в Ташкенте для комфортного отдыха"
-data-uz="Toshkentda qulay dam olish uchun shinam mehmonxona"
-data-en="A cozy hotel in Tashkent for a comfortable stay"
-data-zh="塔什干舒适温馨的酒店">Уютный отель в Ташкенте для комфортного отдыха</p>
+<div class="box">
+<h2>Deluxe Room #6</h2>
+<div class="gallery">
+<img src="deluxe-room-6-1.jpg">
+<img src="deluxe-room-6-2.jpg">
+</div>
+<p class="roomText">Элегантный просторный номер с большой кроватью, кондиционером, Smart TV и удобной зоной отдыха.</p>
+</div>
 
-<a class="btn" href="tel:+998770322777">📞 <span data-ru="Позвонить" data-uz="Qo‘ng‘iroq qilish" data-en="Call" data-zh="拨打电话">Позвонить</span></a>
+<div class="box">
+<h2>Lux Room #7</h2>
+<div class="gallery">
+<img src="deluxe-room-7-1.jpg">
+<img src="deluxe-room-7-2.jpg">
+<img src="deluxe-room-7-3.jpg">
+</div>
+<p class="roomText">Современный номер категории Lux с мягким интерьером, большой кроватью и уютной атмосферой.</p>
+</div>
 
-<a class="btn" href="https://t.me/seven_days_hotel" target="_blank">
+<div class="box">
+<h2 id="contactTitle">📞 Контакты</h2>
+<p>📞 Телефон: +998 77 032 27 77</p>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" width="24"> Telegram: @seven_days_hotel</p>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" width="24"> Instagram: @7dayshomyhome</p>
+
+<a class="btn" href="tel:+998770322777">📞 <span id="bookBtn">Забронировать</span></a>
+<a class="btn" href="https://t.me/seven_days_hotel">
 <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" width="20"> Telegram
 </a>
-
-<a class="btn" href="https://instagram.com/7dayshomyhome" target="_blank">
+<a class="btn" href="https://instagram.com/7dayshomyhome">
 <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" width="20"> Instagram
 </a>
 </div>
 
-<div class="box">
-<h2 data-ru="🏨 О нас" data-uz="🏨 Biz haqimizda" data-en="🏨 About us" data-zh="🏨 关于我们">🏨 О нас</h2>
+<script>
+function setLang(lang){
+const t={
+ru:{
+hero:"Уютный отель в Ташкенте для комфортного отдыха",
+call:"Позвонить",
+aboutTitle:"🏨 О нас",
+about:"7 Days Homy Home — уютный отель в Ташкенте. Комфортные номера, бесплатный Wi-Fi, Smart TV, кондиционер и удобное расположение.",
+map:"📍 Показать на карте",
+reviews:"⭐ Отзывы гостей",
+price:"💰 Прайс-лист",
+daily:"Суточная ставка:",
+hourly:"Почасовая ставка 2 часа:",
+foreign:"Для нерезидентов:",
+contact:"📞 Контакты",
+book:"Забронировать"
+},
+uz:{
+hero:"Toshkentda qulay va shinam mehmonxona",
+call:"Qo‘ng‘iroq qilish",
+aboutTitle:"🏨 Biz haqimizda",
+about:"7 Days Homy Home — Toshkentdagi shinam mehmonxona. Qulay xonalar, bepul Wi-Fi, Smart TV, konditsioner va qulay joylashuv.",
+map:"📍 Xaritada ko‘rish",
+reviews:"⭐ Mehmonlar fikri",
+price:"💰 Narxlar",
+daily:"Kunlik narx:",
+hourly:"Soatbay narx 2 soat:",
+foreign:"Norezidentlar uchun:",
+contact:"📞 Aloqa",
+book:"Bron qilish"
+},
+en:{
+hero:"Cozy hotel in Tashkent for a comfortable stay",
+call:"Call",
+aboutTitle:"🏨 About us",
+about:"7 Days Homy Home is a cozy hotel in Tashkent. Comfortable rooms, free Wi-Fi, Smart TV, air conditioning and a convenient location.",
+map:"📍 Show on map",
+reviews:"⭐ Guest reviews",
+price:"💰 Price list",
+daily:"Daily rate:",
+hourly:"Hourly rate 2 hours:",
+foreign:"For non-residents:",
+contact:"📞 Contacts",
+book:"Book now"
+},
+zh:{
+hero:"塔什干舒适温馨的酒店",
+call:"拨打电话",
+aboutTitle:"🏨 关于我们",
+about:"7 Days Homy Home 是位于塔什干的舒适酒店。舒适客房、免费 Wi-Fi、智能电视、空调和便利的位置。",
+map:"📍 查看地图",
+reviews:"⭐ 客人评价",
+price:"💰 价格表",
+daily:"每日价格:",
+hourly:"2小时价格:",
+foreign:"非居民价格:",
+contact:"📞 联系方式",
+book:"预订"
+}
+};
+document.getElementById("heroText").innerText=t[lang].hero;
+document.getElementById("callBtn").innerText=t[lang].call;
+document.getElementById("aboutTitle").innerText=t[lang].aboutTitle;
+document.getElementById("aboutText").innerText=t[lang].about;
+document.getElementById("mapBtn").innerText=t[lang].map;
+document.getElementById("reviewsTitle").innerText=t[lang].reviews;
+document.getElementById("priceTitle").innerText=t[lang].price;
+document.getElementById("daily").innerText=t[lang].daily;
+document.getElementById("hourly").innerText=t[lang].hourly;
+document.getElementById("foreign").innerText=t[lang].foreign;
+document.
+getElementById("contactTitle").innerText=t[lang].contact;
+document.getElementById("bookBtn").innerText=t[lang].book;
+}
+</script>
 
-<p data-ru="7 Days Homy Home — уютный отель в Ташкенте. Комфортные номера, бесплатный Wi-Fi, Smart TV, кондиционер и удобное расположение."
-data-uz="7 Days Homy Home — Toshkentdagi shinam mehmonxona. Qulay xonalar, bepul Wi-Fi, Smart TV, konditsioner va qulay joylashuv."
-data-en="7 Days Homy Home is a cozy hotel in Tashkent with comfortable rooms, free Wi-Fi, Smart TV, air conditioning and a convenient location."
-data-zh="7 Days Homy Home 是塔什干一家舒适的酒店，提供舒适客房、免费 Wi-Fi、智能电视、空调和便利的位置。">
-7 Days Homy Home — уютный отель в Ташкенте. Комфортные номера, бесплатный Wi-Fi, Smart TV, кондиционер и удобное расположение.</p>
-
-<p>📍 Ташкент, ул. Асака, 15/1</p>
-
-<a class="btn" href="https://yandex.ru/maps/-/CPX0EYz6" target="_blank"
-data-ru="📍 Показать на карте"
-data-uz="📍 Xaritada ko‘rish"
-data-en="📍 Show on map"
-data-zh="📍 在地图上查看">📍 Показать на карте</a>
-
-<p data-ru="🚇 Рядом метро Хамид Алимджан" data-uz="🚇 Hamid Olimjon metrosi yaqinida" data-en="🚇 Near Hamid Alimjan metro" data-zh="🚇 靠近 Hamid Alimjan 地铁站">🚇 Рядом метро Хамид Алимджан</p>
-<p data-ru="🛒 Напротив Korzinka Market" data-uz="🛒 Korzinka Market ro‘parasida" data-en="🛒 Opposite Korzinka Market" data-zh="🛒 Korzinka Market 对面">🛒 Напротив Korzinka Market</p>
-<p data-ru="📶 Бесплатный Wi-Fi" data-uz="📶 Bepul Wi-Fi" data-en="📶 Free Wi-Fi" data-zh="📶 免费 Wi-Fi">📶 Бесплатный Wi-Fi</p>
-<p data-ru="🕒 Заезд: 14:00 | Выезд: 12:00" data-uz="🕒 Kirish: 14:00 | Chiqish: 12:00" data-en="🕒 Check-in: 14:00 | Check-out: 12:00" data-zh="🕒 入住：14:00 | 退房：12:00">🕒 Заезд: 14:00 | Выезд: 12:00</p>
-</div>
-
-<div class="box">
-<h2 data-ru="⭐ Отзывы гостей" data-uz="⭐ Mehmonlar fikrlari" data-en="⭐ Guest reviews" data-zh="⭐ 客人评价">⭐ Отзывы гостей</h2>
-
-<p>⭐⭐⭐⭐⭐</p>
-<p><b>Александр</b><br>
-<span data-ru="Очень чистый и уютный отель. Персонал вежливый, номера комфортные. Обязательно вернусь снова."
-data-uz="Juda toza va shinam mehmonxona. Xodimlar muloyim, xonalar qulay. Yana qaytib kelaman."
-data-en="Very clean and cozy hotel.
 </body>
-</html> 
+</html>
